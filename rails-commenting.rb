@@ -44,7 +44,7 @@ class BlogPostsController < ApplicationController
   def update
     @post = BlogPost.find(params[:id])
     # ---7)
-    # create field to edit blog post
+    # create field to edit blog post.
     @post.update(blog_post_params)
     if @post.valid?
       redirect_to blog_post_path(@post)

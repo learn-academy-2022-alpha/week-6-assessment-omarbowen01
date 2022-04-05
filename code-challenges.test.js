@@ -40,7 +40,7 @@
 //use .map to iterate over arrays
 // use charAt(0), toUpperCase and substring
 // set return value = name.join + 'is' + 'v.occupation'
-// return new array
+// return new array.
 
 
 //   const arrayCap = (arr) => {
@@ -111,7 +111,7 @@
 // use method to cube the sum of the numbers
 // return output of sum of all numbers cubed
 
-// 
+//
 // const numbersCubed= (cubeAndSum1, cubeAndSum2) => {
 //   let eachItem = array.reduce((x,y) => x + y)
 //
