@@ -7,11 +7,11 @@
 # FILE: app/controller/blog_posts_controller.rb
 
 # ---1)
-# BlogPostsController is a child class from the application controller using an index method to show some content.
+# BlogPostsController is a child class from the application controller using an index method to show some content. Class is a blueprint for creating objects.
 class BlogPostsController < ApplicationController
   def index
   # ---2)
-  # Instance variable called posts that shows all the blog posts
+  # Instance variable called posts is an instance varible that shows all the blog posts upon page render.
     @posts = BlogPost.all
   end
   # ---3)
@@ -20,14 +20,14 @@ class BlogPostsController < ApplicationController
     @post = BlogPost.find(params[:id])
   end
   # ---4)
-  # shows a new form with the data from BlogPost.new
+  #Method named new is defined with an instance variable called @post. The responsibility of new is to display a text form for users to input data.
   def new
     @post = BlogPost.new
   end
 
   def create
     # ---5)
-    # post new data for the blog post
+    #@post is an instance variable called on the Database and using the create method to make a new instance in the database using the private method blog_post_params.
     @post = BlogPost.create(blog_post_params)
     if @post.valid?
       redirect_to blog_post_path(@post)
@@ -38,13 +38,14 @@ class BlogPostsController < ApplicationController
 
   def edit
     # ---6)
-    # edit data at the specified params id
+    # finds an instance in the databse using an id and stores it in the instance variable post.
     @post = BlogPost.find(params[:id])
   end
   def update
     @post = BlogPost.find(params[:id])
     # ---7)
-    # create field to edit blog post
+    # Updates Active Record Method on the BlogPost database at a single instance and updates with the params in the private method blog_post_params.
+    #will help with cat tinder project
     @post.update(blog_post_params)
     if @post.valid?
       redirect_to blog_post_path(@post)
@@ -65,7 +66,7 @@ class BlogPostsController < ApplicationController
   end
 
   # ---9)
-  # private allows the items within it to be called upon
+  # private keyword make this method only accessible to the class it was defined in
   private
   def blog_post_params
     # ---10)

@@ -33,27 +33,27 @@
 // })
 
 
+
+
 // b) Create the function that makes the test pass.
-// make a function called arrayCap that takes in an array as a parameter
-// make a variable called newArr
-// make a variable called name
+// make a function called mappedArr that takes in an array as a parameter
+// make a variable called mappedArr
+// make a variable called splitname containing an object of name.split
 //use .map to iterate over arrays
-// use charAt(0), toUpperCase and substring
-// set return value = name.join + 'is' + 'v.occupation'
-// return new array
+// use string, toUpperCase and slice method to capitalize first letter of name
+// use join to turn string to array and obj.occupation for string interpolation
+// return mappedArr.
 
+const arrayCap = (arr) => {
 
-//   const arrayCap = (arr) => {
-//     let newArr = arr.map(v => {
-//       let name = v.name.split(" ").map(v => v.charAt(0).toUpperCase() + v.substring(1)
-//       )
-//       return v = name.join(" ") + ' is ' +  v.occupation
-//     })
-//     return newArr
-// }
+  let mappedArr = arr.map(obj)=>
 
-
-
+  let splitName = obj.name.split(" ")
+  let mappedCapitalizedName = splitName.map(string=> string[0].toUpperCase() + string.slice(1))
+    return `${mappedCapitalizedName.join(" ")} is ${obj.occupation}.`
+})
+    return mappedArr
+}
 
 // // --------------------2) Create a function that takes in a mixed data array and returns an array of only the REMAINDERS of the numbers when divided by 3.
 //
@@ -73,22 +73,20 @@
 
 
 // // b) Create the function that makes the test pass.
+// create a function called remainders that returns an array of only the remainders divided by 3
+// create variable called filtered
+// filter array
+// return typeof v === "number"
+// return filtered.map with value and v modulo 3
 
-//create a function named remainders that returns an array of only the remainders of numbers when divided by 3
-// pass hodgepodge1 and hodgepodge2 as parameters
-// use .filter to iterate through array to turn the remainder of numbers divided by 3
-// return new array
+const remainders = (arr) =>
+{
+  let filtered = arr.filter(v) => {
+      return typeof v === "number"
+})
+      return filtered.map((v) => v % 3)
+}
 
-// const remainders = (hodgepodge1, hodgepodge2) => {
-//
-//   let newIndex= array.filter(value => {
-//
-//   return value % 3 === 0
-//    (stuck here)
-// }
-// }
-
-//
 // // --------------------3) Create a function that takes in an array of numbers and returns the sum of all the numbers cubed.
 //
 // // a) Create a test with an expect statement using the variables provided.
@@ -106,15 +104,16 @@
 // })
 
 // b) Create the function that makes the test pass.
-// create function called numbersCubed
-// use reduce to return sum of all the numbersCubed
-// use method to cube the sum of the numbers
-// return output of sum of all numbers cubed
 
-// 
-// const numbersCubed= (cubeAndSum1, cubeAndSum2) => {
-//   let eachItem = array.reduce((x,y) => x + y)
-//
-// return array.filter(cubeAndSum1) => {
-// }
-// stuck here
+//create a function named numbersCubed that returns an array of only the remainders of numbers when divided by 3
+// use arr as a parameter
+// create variable of sum eqaul to zero
+// use .filter to iterate through array to return the sum of the reminders divided by three
+// return new sum
+
+const numbersCubed = (arr) => {
+  let sum =0
+  arr.filter(v=> sum += v ** 3)
+)
+return sum
+}
