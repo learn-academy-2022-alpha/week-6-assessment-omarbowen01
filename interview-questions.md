@@ -9,7 +9,7 @@ Then, research the question to expand on your answer. Even if you feel you have 
 
   Your answer: You can utilize DB migrate to add the foreign key.
 
-  Researched answer: You can utilize DB migrate to add the foreign key. The foreign key would be named has_many and would be on the Cohort model.
+  Researched answer: You can utilize DB migrate to add the foreign key. The foreign key would be named has_many and would be on the Student model.
 
 
 
@@ -17,7 +17,8 @@ Then, research the question to expand on your answer. Even if you feel you have 
 
   Your answer: Index, Create, Show, Update, Destroy. I'm not sure but I will research and elaborate below.
 
-  Researched answer: Index, Create, Show, Update, Destroy. These must always be passed to params because they are needed to have a functioning website.
+
+  Researched answer: Index, Show, Create, Update and Destroy. They must alwways be passed through params because it passes CRUD actions in database which are needed to maintain a functioning website.
 
 
 
